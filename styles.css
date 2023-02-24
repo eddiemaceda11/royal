@@ -80,3 +80,17 @@ nav li {
 nav li:hover {
   border-bottom: 1px solid rgba(159, 158, 158, 0.774);
 }
+
+/* Main */
+main {
+  border: 1px solid blue;
+  height: 700px;
+  min-width: 100%;
+  background-image: url("img/royal-bg.avif");
+  background-position: center 20%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: brightness(50%);
+}
+
+/* Trending */
