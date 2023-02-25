@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Document</title>
+    <title>Royal co.</title>
   </head>
 
   <body>
@@ -25,9 +26,9 @@
           <li><a href="#">Explore</a></li>
         </ul>
         <ul class="side-nav">
-          <li><i>a</i></li>
-          <li><i>b</i></li>
-          <li><i>c</i></li>
+          <li><i class="fa-solid fa-magnifying-glass"></i></li>
+          <li><i class="fa-regular fa-user"></i></li>
+          <li><i class="fa-solid fa-cart-shopping"></i></li>
         </ul>
       </nav>
     </header>
@@ -38,25 +39,38 @@
     <!-- Trending items -->
     <section class="container trending">
       <h2>Trending</h2>
-      <ul class="trending-cards">
-        <li>
-          <img src="img/trending-tee.avif" alt="" />
-          <h3>Royal 705 Tee Shirt</h3>
-          <h4>$40.00 USD</h4>
-        </li>
-        <li>
-          <img src="img/trending-sweatshirt.avif" alt="" />
-          <h3>Royal 705 Sweatshirt</h3>
-          <h4>$50.00 USD</h4>
-        </li>
-        <li>
-          <img src="img/trending-flask.avif" alt="" />
-          <h3>Royal 705 Hydro Flask</h3>
-          <h4>$30.00 USD</h4>
-        </li>
+      <ul class="trending-cards" id="trending-cards">
+        <!-- Trending items imported from JS here -->
       </ul>
     </section>
 
-    <script src="main.js"></script>
+    <!-- Gift Card -->
+    <section class="container giftcard">
+      <img src="img/gift-card.webp" alt="" />
+      <div class="giftcard-info-div">
+        <h2>The Royal Co. <br />Gift Card</h2>
+        <h3>$10.00 USD</h3>
+        <h4>Amount</h4>
+        <ul class="amount-choices">
+          <li class="gc-price-selected">$10.00</li>
+          <li>$25.00</li>
+          <li>$50.00</li>
+          <li>$100.00</li>
+        </ul>
+        <h4>Quantity</h4>
+        <div class="giftcard-quantity-div">
+          <button class="gc-minus"><i class="fa-solid fa-minus"></i></button>
+          <p>1</p>
+          <button class="gc-plus"><i class="fa-solid fa-plus"></i></button>
+        </div>
+        <button class="gc-add-to-cart">Add to cart</button>
+        <h5>More payment options</h5>
+        <h3>*10% off a Gift card purchase of $100</h3>
+        <h4>*Limited time offer</h4>
+      </div>
+    </section>
+    s
+
+    <script type="module" src="main.js"></script>
   </body>
 </html>
