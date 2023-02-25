@@ -331,15 +331,42 @@ section.footer {
   font-size: 1rem;
 }
 
+.footer-3 {
+  color: #fff;
+  position: absolute;
+  top: 10.2%;
+  right: 10%;
+  font-size: 1rem;
+}
+
 .footer-1 h2,
-.footer-2 h2 {
+.footer-2 h2,
+.footer-3 h2 {
   font-weight: 500;
   padding-bottom: 1rem;
 }
 
 .footer-1 h4,
-.footer-2 h4 {
+.footer-2 h4,
+.footer-3 h4 {
   margin-top: 1.2rem;
   font-weight: 300;
   font-size: 0.8rem;
+}
+
+.socials {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.4rem;
+  margin-top: 1.8rem;
+  align-items: center;
+}
+
+.footer-close {
+  border-top: 0.5px solid rgb(211, 211, 211);
+  height: 5rem;
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  width: 90%;
 }
