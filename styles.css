@@ -118,6 +118,7 @@ section.trending h2 {
 .trending-cards li {
   height: 470px;
   width: 300px;
+  filter: brightness(90%);
 }
 
 .trending-cards li:hover {
@@ -144,7 +145,7 @@ section.trending h2 {
 
 /* About */
 section.giftcard {
-  height: 700px;
+  height: 670px;
   display: flex;
   gap: 5rem;
 }
@@ -254,4 +255,91 @@ section.giftcard {
   margin-top: 1.2rem;
   text-align: center;
   cursor: pointer;
+}
+
+/* sub bg image */
+.sub-bg-image {
+  min-width: 100vw;
+  height: 650px;
+  background-image: url("img/sub-bg-img.avif");
+  background-position: center 70%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: brightness(85%);
+}
+
+/* Bullets */
+section.bullets {
+  margin-top: 4rem;
+  height: 150px;
+  display: flex;
+  width: 100%;
+  gap: 6rem;
+}
+
+.bullet h2 {
+  text-align: center;
+}
+
+.bullet h3 {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+/* Footer */
+section.footer {
+  height: 480px;
+  position: relative;
+}
+
+.image {
+  background-image: url("img/footer-image.avif");
+  position: relative;
+  background-repeat: no repeat;
+  height: 100%;
+  background-repeat: no repeat;
+  background-position: center 35%;
+  background-size: cover;
+  /* filter: brightness(40%); */
+}
+
+.image:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.footer-1 {
+  color: #fff;
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  font-size: 1rem;
+}
+
+.footer-2 {
+  color: #fff;
+  position: absolute;
+  top: 10.2%;
+  left: 30%;
+  font-size: 1rem;
+}
+
+.footer-1 h2,
+.footer-2 h2 {
+  font-weight: 500;
+  padding-bottom: 1rem;
+}
+
+.footer-1 h4,
+.footer-2 h4 {
+  margin-top: 1.2rem;
+  font-weight: 300;
+  font-size: 0.8rem;
 }
