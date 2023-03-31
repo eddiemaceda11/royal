@@ -8,7 +8,7 @@ let html = "";
 trendingData.map((item) => {
   html += `
     <li>
-      <a href="#">
+      <a href="product-pages/${item.key}.html">
         <img src=${item.img} alt="" />
         <h3>${item.name}</h3>
         <h4>${item.price}</h4>
@@ -51,4 +51,45 @@ const displayedGiftcardPrice = document.getElementById("displayed-gc-price");
 function updateGiftcardPrice(price) {
   displayedGiftcardPrice.textContent = "";
   displayedGiftcardPrice.textContent = `${price} USD`;
+}
+
+// Update quantity counter
+const quantity = document.querySelector(".giftcard-quantity-div");
+const quantityAmount = document.getElementById("quantity-amount");
+
+quantity.addEventListener("click", (e) => {
+  // check to see if minus is selected
+  if (e.target.classList.contains("gc-minus")) {
+    // if it is, check to see if quantity is 1
+    // and if it is, return
+    if (quantityAmount.textContent === "1") {
+      return;
+    }
+
+    // Otherwise subtract quantity by 1
+    // and update quantity display
+    subtractQuantity();
+    quantityAmount.textContent = subtractQuantity();
+  }
+  // check to see if plus is selected
+  if (e.target.classList.contains("gc-plus")) {
+    // if it is, add 1 to quantity and
+    // update display
+    addQuantity();
+    quantityAmount.textContent = addQuantity();
+  }
+});
+
+function addQuantity() {
+  // convert current quantity amt to a number
+  const quantityAmountNum = Number(quantityAmount.textContent);
+
+  return quantityAmountNum + 1;
+}
+
+function subtractQuantity() {
+  // convert current quantity amt to a number
+  const quantityAmountNum = Number(quantityAmount.textContent);
+
+  return quantityAmountNum - 1;
 }

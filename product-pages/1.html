@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../styles.css" />
     <title>Royal co.</title>
   </head>
 
@@ -25,7 +25,7 @@
       </div>
       <nav>
         <ul class="main-nav">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="../index.html">Home</a></li>
           <li><a href="#">Shop</a></li>
           <li><a href="#">Explore</a></li>
         </ul>
@@ -39,51 +39,10 @@
       </nav>
     </header>
 
-    <!-- Main -->
-    <main class="container">
-      <h2>Mens Collection 2023</h2>
-      <h3>The new collection has arrived.</h3>
-      <button class="main-btn">Shop Now</button>
-    </main>
-
-    <!-- Trending items -->
-    <section class="container trending">
-      <h2>Trending</h2>
-      <ul class="trending-cards" id="trending-cards">
-        <!-- Trending items imported from JS here -->
-      </ul>
+    <!-- Section -->
+    <section class="trending-page" id="1">
+      <!-- load page from JS here -->
     </section>
-
-    <!-- Gift Card -->
-    <section class="container giftcard">
-      <img src="img/gift-card.webp" alt="" />
-      <div class="giftcard-info-div">
-        <h2>The Royal Co. <br />Gift Card</h2>
-        <h3 id="displayed-gc-price">$10.00 USD</h3>
-        <h4>Amount</h4>
-        <ul class="amount-choices">
-          <li class="gc-price-selected" id="gc-1">$10.00</li>
-          <li id="gc-2">$25.00</li>
-          <li id="gc-3">$50.00</li>
-          <li id="gc-4">$100.00</li>
-        </ul>
-        <h4>Quantity</h4>
-        <div class="giftcard-quantity-div">
-          <button class="gc-minus"><i class="fa-solid fa-minus"></i></button>
-          <p id="quantity-amount">1</p>
-          <button class="gc-plus"><i class="fa-solid fa-plus"></i></button>
-        </div>
-        <button class="gc-add-to-cart">Add to cart</button>
-        <h5>More payment options</h5>
-        <h3>*10% off a Gift card purchase of $100</h3>
-        <h4>*Limited time offer</h4>
-      </div>
-    </section>
-
-    <!-- Sub Bg Image -->
-    <section class="sub-bg-image"></section>
-
-    <!-- Bullets -->
 
     <section class="container bullets">
       <div class="bullet">
@@ -132,6 +91,6 @@
       </div>
       <div class="footer-close"></div>
     </section>
-    <script type="module" src="main.js"></script>
+    <script type="module" src="../product-selection.js"></script>
   </body>
 </html>
