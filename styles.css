@@ -1,12 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
-body {
-  background-color: #fff;
-  font-family: "Montserrat", sans-serif;
+.App {
+  text-align: center;
   overflow-x: hidden;
 }
 
@@ -22,7 +24,6 @@ ul {
 
 a {
   text-decoration: none;
-  /* color: rgb(69, 64, 64); */
   color: rgb(54, 48, 48);
 }
 
@@ -32,20 +33,22 @@ a {
 }
 
 /* Sub Header */
-section.sub-header {
+
+.sub-header {
   height: 37px;
   background-color: rgb(29, 29, 29);
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-section.sub-header p {
-  color: #fff;
+.sub-header p {
   font-size: 0.8rem;
 }
 
 /* Header */
+
 header {
   display: flex;
   padding: 0rem 6rem;
@@ -53,35 +56,15 @@ header {
   color: rgb(54, 48, 48);
   border-bottom: 1px solid rgba(159, 158, 158, 0.27);
   height: 85px;
-}
-
-.logo-div {
-  position: relative;
-  width: 220px;
-  display: flex;
   align-items: center;
 }
 
-.logo-div h2 {
+header div h2 {
   color: rgb(54, 48, 48);
   font-size: 2rem;
-  font-weight: 200;
+  font-weight: 300;
   text-transform: uppercase;
   width: 100%;
-}
-
-.logo-img {
-  height: 120px;
-  width: 120px;
-  opacity: 0.9;
-}
-
-.logo-text {
-  font-size: 12px;
-  position: absolute;
-  bottom: 13%;
-  right: 0;
-  opacity: 0.8;
 }
 
 nav {
@@ -94,14 +77,14 @@ nav {
 
 nav li {
   cursor: pointer;
-  border: 1px solid white;
+  border: 1px solid #fff;
   padding-bottom: 2px;
 }
 
 .main-nav {
   display: flex;
   text-transform: uppercase;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .side-nav {
@@ -115,24 +98,85 @@ nav li {
 
 nav li:hover {
   border-bottom: 1px solid rgba(159, 158, 158, 0.774);
+  transition: all 0.15s ease-in;
+}
+
+.cart-div {
+  position: relative;
+}
+
+.cart-div p {
+  position: absolute;
+  top: -60%;
+  right: -100%;
+  padding: 0.3rem 0.6rem;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+/* Searchbar */
+.header-search-div {
+  position: relative;
+  margin: 0 auto;
+  width: 35rem;
+  height: 2.4rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: rgb(233, 232, 232);
+}
+
+.search-icon {
+  position: absolute;
+  left: 2.3%;
+  top: 22%;
+  font-size: 1.3rem;
+}
+
+.header-search-div textarea {
+  height: 100%;
+  line-height: 2.4rem;
+  width: 83%;
+  border: none;
+  background-color: transparent;
+  resize: none;
+}
+
+.header-search-div textarea:focus {
+  outline: none;
+}
+
+.header-search-div textarea::placeholder {
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+
+.fa-regular.fa-circle-xmark {
+  position: absolute;
+  right: 2.3%;
+  top: 19%;
+  font-size: 1.5rem;
+}
+
+.fa-regular.fa-circle-xmark:hover {
+  transform: rotate(90deg);
+  transition: all 0.3s ease;
+}
+
+.fa-regular.fa-circle-xmark:not(:hover) {
+  transition: all 0.3s ease;
 }
 
 /* Main */
 main {
   height: 700px;
   min-width: 100%;
-  /* background-image: url("img/photo-1507399076055-c021699485c3.avif"); */
-  /* background-position: center 30%; */
-  /* background-size: cover; */
-  /* background-repeat: no-repeat; */
-  /* filter: brightness(50%); */
-  /* opacity: 0.9; */
   position: relative;
 }
 
 main::before {
   content: "";
-  background-image: url("img/photo-1507399076055-c021699485c3.avif");
+  background-image: url("https://raw.githubusercontent.com/eddiemaceda11/royal/main/img/photo-1507399076055-c021699485c3.avif");
   background-size: cover;
   background-position: center 30%;
   background-repeat: no-repeat;
@@ -141,7 +185,7 @@ main::before {
   right: 0px;
   bottom: 0px;
   left: 0px;
-  filter: brightness(80%);
+  filter: brightness(50%);
 }
 
 main h2 {
@@ -151,7 +195,6 @@ main h2 {
   position: absolute;
   right: 10%;
   top: 20%;
-  /* z-index: 1; */
 }
 
 main h3 {
@@ -166,21 +209,20 @@ main h3 {
 
 .main-btn {
   background-color: transparent;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
+  position: absolute;
   padding: 0.7rem 1.8rem;
   font-size: 1rem;
   color: #fff;
   right: 15%;
   top: 40%;
   z-index: 1;
-  position: absolute;
   text-transform: uppercase;
 }
 
 .main-btn:hover {
   background-color: rgba(205, 205, 205, 0.206);
   cursor: pointer;
-  /* color: #000; */
 }
 
 /* Trending */
@@ -208,7 +250,6 @@ section.trending h2 {
 
 .trending-cards li {
   height: 470px;
-  /* width: 300px; */
   width: 80%;
   object-fit: cover;
   filter: brightness(90%);
@@ -216,8 +257,6 @@ section.trending h2 {
 
 .trending-cards li:hover {
   cursor: pointer;
-
-  filter: brightness(80%);
 }
 
 .trending-cards li img {
@@ -237,9 +276,8 @@ section.trending h2 {
   font-weight: 300;
 }
 
-/* About */
+/* Gift Card */
 section.giftcard {
-  /* height: 670px; */
   overflow-x: hidden;
   display: flex;
   gap: 5rem;
@@ -282,7 +320,7 @@ section.giftcard {
 }
 
 .amount-choices li {
-  border: 1px solid black;
+  border: 1px solid #000;
   display: inline-block;
   text-align: center;
   padding: 0.5rem 1rem;
@@ -296,13 +334,9 @@ section.giftcard {
   color: #fff;
 }
 
-/* .amount-choices li:hover {
-  background-color: rgb(239, 239, 239);
-} */
-
 .giftcard-quantity-div {
   display: flex;
-  border: 1px solid black;
+  border: 1px solid #000;
   width: 8rem;
   height: 2.5rem;
   margin-top: 0.5rem;
@@ -342,7 +376,7 @@ section.giftcard {
 }
 
 .gc-add-to-cart:hover {
-  border: 2px solid black;
+  border: 2px solid #000;
   background-color: rgb(239, 239, 239);
   box-shadow: 0px 0px 1px 1px rgba(218, 218, 218, 0.728);
 }
@@ -355,18 +389,17 @@ section.giftcard {
   cursor: pointer;
 }
 
-/* sub bg image */
+/* Sub BG Image */
 .sub-bg-image {
-  min-width: 100vw;
-  height: 520px;
   background-image: url("img/photo-1597346809534-ecaec21ef84c.avif");
+  min-width: 100%;
+  height: 520px;
   background-position: center 35%;
   background-size: cover;
   background-repeat: no-repeat;
-  /* filter: brightness(5%); */
 }
 
-/* Bullets */
+/* Bullet Points */
 section.bullets {
   padding-top: 4rem;
   height: 210px;
@@ -396,12 +429,10 @@ section.footer {
 .image {
   background-image: url("img/footer-image.avif");
   position: relative;
-  background-repeat: no repeat;
+  background-repeat: no-repeat;
   height: 100%;
-  background-repeat: no repeat;
   background-position: center 35%;
   background-size: cover;
-  /* filter: brightness(40%); */
 }
 
 .image:before {
@@ -409,8 +440,8 @@ section.footer {
   position: absolute;
   top: 0;
   right: 0;
-  left: 0;
   bottom: 0;
+  left: 0;
   background: rgba(0, 0, 0, 0.6);
 }
 
@@ -470,7 +501,51 @@ section.footer {
   width: 90%;
 }
 
-/* MEDIA QUERIES */
+/* MEDIA */
+@media (max-width: 1095px) {
+  .main-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 840px) {
+  /* FOOTER */
+
+  .footer-1 {
+    left: 4%;
+  }
+
+  .footer-2 {
+    top: 10.4%;
+    left: 55%;
+    width: 150px;
+  }
+
+  .footer-3 {
+    top: 52%;
+    left: 4%;
+    font-size: 1rem;
+  }
+
+  .footer-1 h2,
+  .footer-2 h2,
+  .footer-3 h2 {
+    padding-bottom: 0rem;
+  }
+
+  .footer-1 h4,
+  .footer-2 h4,
+  .footer-3 h4 {
+    margin-top: 0.2rem;
+    margin-left: 0.15rem;
+  }
+
+  .socials {
+    margin-top: 0.8rem;
+    margin-left: 0.15rem;
+  }
+}
+
 @media (max-width: 515px) {
   header {
     padding: 0rem;
@@ -478,41 +553,48 @@ section.footer {
 
   .logo-div {
     position: relative;
-    width: 140px;
-    border: 1px solid red;
+    width: 180px;
+    /* border: 1px solid red; */
   }
 
-  .logo-img {
-    height: 100px;
-    width: 100px;
-  }
-
-  .logo-text {
-    font-size: 12px;
-    position: absolute;
-    bottom: 13%;
-    right: 3%;
-    opacity: 0.8;
-  }
-
-  /* MAIN */
-  main {
-    background-position: center center;
-    background-position-x: 25%;
-    height: 650px;
+  .logo-div h2 {
+    font-size: 1.8rem;
   }
 
   .main-nav {
     display: none;
   }
 
-  /* TRENDING */
+  /* Main */
+  main {
+    background-position: center center;
+    background-position-x: 25%;
+    height: 650px;
+  }
+
+  main h2 {
+    font-size: 2rem;
+    top: 10%;
+  }
+
+  main h3 {
+    font-size: 1.2rem;
+
+    top: 18%;
+  }
+
+  .main-btn {
+    right: 8%;
+    top: 75%;
+  }
+
+  /* Trending cards */
   .trending-cards {
     flex-direction: column;
     align-items: center;
   }
 
-  /* GIFT CARD SECTION */
+  /* Giftcard */
   section.giftcard {
     max-width: 100%;
     flex-direction: column;
@@ -545,18 +627,18 @@ section.footer {
   }
 
   .amount-choices li {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 
   .gc-add-to-cart {
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-left: 0.2rem;
     padding: 0.7rem 7rem;
     font-family: inherit;
     font-weight: 500;
   }
 
-  /* BULLETS */
+  /* Bullets */
   section.bullets {
     display: none;
   }
